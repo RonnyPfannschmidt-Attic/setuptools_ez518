@@ -3,8 +3,10 @@ import sys
 import subprocess
 import logging
 log = logging.getLogger(__name__)
-log.addHandler(logging.StreamHandler())
-log.handlers[0].setFormatter(logging.Formatter("%(name)s [%(levelname)s] %(message)s"))
+handler = logging.StreamHandler()
+handler.setFormatter(
+    logging.Formatter("%(name)s [%(levelname)s] %(message)s"))
+log.addHandler(handler)
 
 DISABLED = os.environ.get('SETUPTOOLS_EZ518') == 'disabled'
 DEBUG = os.environ.get('SETUPTOOLS_EZ518') == 'debug'

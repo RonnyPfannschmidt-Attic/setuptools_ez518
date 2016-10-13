@@ -12,7 +12,7 @@ DISABLED = os.environ.get('SETUPTOOLS_EZ518') == 'disabled'
 DEBUG = os.environ.get('SETUPTOOLS_EZ518') == 'debug'
 log.setLevel(logging.DEBUG if DEBUG else logging.INFO)
 PACKAGGE_INTO = os.environ.get(
-    'SETUPTOOLS_EZ518_PACKAGGE_INTO', '.cache/python-ez518')
+    'SETUPTOOLS_EZ518_PACKAGE_INTO', '.cache/python-ez518')
 
 
 def normalize_to_folder(path):

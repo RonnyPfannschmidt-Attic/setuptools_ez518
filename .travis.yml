@@ -10,6 +10,6 @@ python:
 cache: pip
 env: SETUPTOOLS_EZ518=disabled
 install:
-  pip install pytest toml 
+  pip install -U pytest toml 
 script:
   pytest
